@@ -1,0 +1,6 @@
+﻿History
+=======
+
+This sample codes describes the usage of driver functions c_get_sensor_information as well as c_get_sensor_data.
+
+2014-07 SJA: add manual sensor selection using c_get_sensor_data_extended
