@@ -1,8 +1,7 @@
 # samples-doc_telidtransponders_windows / Windows DOC sample codes for TELID®200 sensor transponders
 This repository containts sample codes for handling **TELID®200** sensor transponders on Windows devices using a Micro-Sensys RFID reader
 
-[Test LINK: SPC communication mode](../doc/communication-modes/spc)
-//TODO Add link See "communication-modes/spc"
+> For details on DOC communication check [Useful Links](#Useful-Links) 
 
 ## Requirements
 * IDE (Visual Studio 2017 / eclipse IDE)
@@ -23,7 +22,7 @@ Using this codes the communication port can be open/closed. Once the communicati
 Import the project into your IDE and check the communication port name for the RFID reader (for example *COM3*) and fill the name into the code.
 For some samples the available devices are automatically detected. 
 
-//TODO screenshot?? 
+> **TODO screenshot??**
 <!--- ![Screenshot](screenshot/SampleApp_SpcControl_AndroidJava.png) --->
 
  1. Select the device you wish to connect to and open the communication port. Once the connect process finishes, if the device is connected the START button will be enabled.
@@ -31,9 +30,11 @@ For some samples the available devices are automatically detected.
 
 ## Useful Links
 
- - [JAR Library and API documentation](https://www.microsensys.de/downloads/DevSamples/Libraries/Windows/microsensysRFID%20-%20jar%20library/)
- - [Native library and API documentation](https://www.microsensys.de/downloads/DevSamples/Libraries/UNIX/microsensysRFID%20-%20jar%20library/)
- - [Check what is possible using our iID®DEMOsoft (section SENSORdemo) for PC! Download it using this link](https://www.microsensys.de/downloads/CDContent/Install/iID%c2%ae%20DEMOsoft.zip)
+* [JAR Library and API documentation](https://www.microsensys.de/downloads/DevSamples/Libraries/Windows/microsensysRFID%20-%20jar%20library/)
+* [Native library and API documentation](https://www.microsensys.de/downloads/DevSamples/Libraries/UNIX/microsensysRFID%20-%20jar%20library/)
+* Check what is possible using our iID®DEMOsoft (section SENSORdemo) for PC! Download it using [this link](https://www.microsensys.de/downloads/CDContent/Install/iID%c2%ae%20DEMOsoft.zip)
+* GitHub *doc* repository: [Micro-Sensys/doc](https://github.com/Micro-Sensys/doc)
+	* [communication-modes/doc](https://github.com/Micro-Sensys/doc/tree/master/communication-modes/doc)
 
 ## Contact
 
