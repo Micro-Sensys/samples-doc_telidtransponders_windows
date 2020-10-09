@@ -4,29 +4,19 @@ This repository containts sample codes for handling **TELID®200** sensor transp
 > For details on DOC communication check [Useful Links](#Useful-Links) 
 
 ## Requirements
-* IDE (Visual Studio 2017 / eclipse IDE)
 * Micro-Sensys RFID reader
 * TELID®200 sensor transponders
 
 > For compatible script files, check [Useful Links](#Useful-Links)
 
 ## Implementation
-* Java: Uses **RFIDFunctions_3000** class to communicate with TELID®200 sensor transponders. 
-* Native: Uses **iiddrv30_pro.dll** to communicate with TELID®200 sensor transponders.
-This code shows how to use **SpcInterfaceControl** class to communicate with a device running on SPC mode. 
-Using this codes the communication port can be open/closed. Once the communication with RFID reader is established, a Thread can be started to cyclically search for TELID®200 and read current measurement value.
+Sample code available in this repository show how to communicate with TELID®200 sensor transponders.
+> The recommended way is to use either one of our libraries (Java or native) available (See [Useful Links](#Useful-Links)). 
 
-> Library information is available under API documentation. See [Useful Links](#Useful-Links)
-
-## Steps
-Import the project into your IDE and check the communication port name for the RFID reader (for example *COM3*) and fill the name into the code.
-For some samples the available devices are automatically detected. 
-
-> **TODO screenshot??**
-<!--- ![Screenshot](screenshot/SampleApp_SpcControl_AndroidJava.png) --->
-
- 1. Select the device you wish to connect to and open the communication port. Once the connect process finishes, if the device is connected the START button will be enabled.
- 2. Use *START* button to start the read Thread. The library will automatically detect the TELID® type and show the measurements
+## Available sample codes
+This repository contains subfolders for different languages
+ * [Java](java)
+ * [native](native)
 
 ## Useful Links
 
