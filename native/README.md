@@ -8,8 +8,6 @@ This sample code is for handling **TELID®200** sensor transponders on Windows d
 * Micro-Sensys RFID reader
 * TELID®200 sensor transponders
 
-> For compatible script files, check [Useful Links](#Useful-Links)
-
 ## Implementation
 This code shows how to use **iiddrv30_pro.dll** class to communicate with a device running on SPC mode. 
 Using this code the communication port can be open/closed. Once the communication with RFID reader is established, a Thread can be started to cyclically search for TELID®200 and read current measurement value.
@@ -26,7 +24,6 @@ For some samples the available devices are automatically detected.
  2. Use *START* button to start the read Thread. The library will automatically detect the TELID® type and show the measurements
 
 ## Useful Links
-
 * [Native library and API documentation](https://www.microsensys.de/downloads/DevSamples/Libraries/UNIX/microsensysRFID%20-%20jar%20library/)
 * Check what is possible using our iID®DEMOsoft (section SENSORdemo) for PC! Download it using [this link](https://www.microsensys.de/downloads/CDContent/Install/iID%c2%ae%20DEMOsoft.zip)
 * GitHub *documentation* repository: [Micro-Sensys/documentation](https://github.com/Micro-Sensys/documentation)
