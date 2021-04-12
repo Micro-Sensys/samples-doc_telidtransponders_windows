@@ -12,7 +12,7 @@ This sample code is for handling **TELID®200** sensor transponders on Windows d
 This code shows how to use **RFIDFunctions_3000** class to communicate with TELID®200 sensor transponders. 
 Using this code the communication port can be open/closed. Once the communication with RFID reader is established, a Thread can be started to cyclically search for TELID®200 and read current measurement value.
 
-> Library information is available under API documentation. See [Useful Links](#Useful-Links)
+> Class information is available under API documentation. See [Useful Links](#Useful-Links)
 
 ## Steps
 Import the project into your IDE and check the communication port name for the RFID reader (for example *COM3*) and fill the name into the code.

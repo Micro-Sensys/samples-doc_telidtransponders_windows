@@ -13,7 +13,7 @@ This code shows how to use **iIDReaderLibrary.DocInterfaceControl** class to com
 For demo purposes, both a .NET Core console and a WPF App as sample code is provided. Inside each solution there are different projects available that show all the different functions provided.
 Code used for these projects is written in C# or VisualBasic.
 
-> Library information is available under API documentation. See [Useful Links](#Useful-Links)
+> Class information is available under API documentation. See [Useful Links](#Useful-Links)
 
 ## Steps
 Import this project into your IDE, choose a project and launch it. First in the console application you can select the communication port name for the RFID reader (for example *COM3*). Then for console applications a menu with functions will be shown, and for WPF application the other tabs will be enabled
