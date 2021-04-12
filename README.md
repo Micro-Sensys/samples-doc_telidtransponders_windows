@@ -11,15 +11,16 @@ This repository containts sample codes for handling **TELID®200** sensor transp
 
 ## Implementation
 Sample code available in this repository show how to communicate with TELID®200 sensor transponders.
-> The recommended way is to use either one of our libraries (Java or native) available (See [Useful Links](#Useful-Links)). 
+> The recommended way is to use either one of our libraries (.NET, Java or native) available (See [Useful Links](#Useful-Links)). 
 
 ## Available sample codes
 This repository contains subfolders for different languages
+ * [.NET](dotnet)
  * [Java](java)
  * [native](native)
 
 ## Useful Links
-
+* [.NET API documentation](https://www.microsensys.de/downloads/DevSamples/Libraries/Windows/)
 * [JAR Library and API documentation](https://www.microsensys.de/downloads/DevSamples/Libraries/Windows/microsensysRFID%20-%20jar%20library/)
 * [Native library and API documentation](https://www.microsensys.de/downloads/DevSamples/Libraries/UNIX/microsensysRFID%20-%20jar%20library/)
 * Check what is possible using our iID®DEMOsoft (section SENSORdemo) for PC! Download it using [this link](https://www.microsensys.de/downloads/CDContent/Install/iID%c2%ae%20DEMOsoft.zip)
