@@ -8,13 +8,11 @@ This sample code is for handling **TELID®200** sensor transponders on Windows d
 * Micro-Sensys RFID reader
 * TELID®200 sensor transponders
 
-> For compatible script files, check [Useful Links](#Useful-Links)
-
 ## Implementation
 This code shows how to use **RFIDFunctions_3000** class to communicate with TELID®200 sensor transponders. 
 Using this code the communication port can be open/closed. Once the communication with RFID reader is established, a Thread can be started to cyclically search for TELID®200 and read current measurement value.
 
-> Library information is available under API documentation. See [Useful Links](#Useful-Links)
+> Class information is available under API documentation. See [Useful Links](#Useful-Links)
 
 ## Steps
 Import the project into your IDE and check the communication port name for the RFID reader (for example *COM3*) and fill the name into the code.
@@ -26,7 +24,6 @@ For some samples the available devices are automatically detected.
  2. Use *START* button to start the read Thread. The library will automatically detect the TELID® type and show the measurements
 
 ## Useful Links
-
 * [JAR Library and API documentation](https://www.microsensys.de/downloads/DevSamples/Libraries/Windows/microsensysRFID%20-%20jar%20library/)
 * Check what is possible using our iID®DEMOsoft (section SENSORdemo) for PC! Download it using [this link](https://www.microsensys.de/downloads/CDContent/Install/iID%c2%ae%20DEMOsoft.zip)
 * GitHub *documentation* repository: [Micro-Sensys/documentation](https://github.com/Micro-Sensys/documentation)
