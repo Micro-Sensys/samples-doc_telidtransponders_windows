@@ -109,7 +109,7 @@
                             </Grid.RowDefinitions>
 
                             <TextBlock Grid.Row="0" Text="Result: " Margin="5" />
-                            <TextBox Grid.Row="1" Name="textBox_Result" VerticalAlignment="Stretch" Margin="5,0,0,0" FontSize="12" Text="0" IsEnabled="False" />
+                            <TextBox Grid.Row="1" Name="textBox_Result" VerticalAlignment="Stretch" Margin="5,0,0,0" FontSize="12" Text="0" IsEnabled="False" TextWrapping="Wrap" />
                         </Grid>
                     </Grid>
                     <TextBox Grid.Column="1" Name="textBox_ThreadLog" VerticalAlignment="Stretch" FontSize="12" Text="" Background="LightCyan" VerticalScrollBarVisibility="Auto" />
