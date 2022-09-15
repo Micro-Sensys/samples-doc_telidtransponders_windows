@@ -16,7 +16,7 @@ Module Program
         Console.WriteLine(".NETCore Console")
         Console.WriteLine("SampleAsync_C#")
         Console.WriteLine("--------------------")
-        Console.WriteLine("Library Version: " + iIDReaderLibrary.Version.LibraryVersion)
+        Console.WriteLine("Library Version: " + DocInterfaceControl.LibraryVersion)
 
         'Get DocInterfaceControl instance
         Dim docIntControl As DocInterfaceControl = Console_InitializeDocInterfaceControl()
