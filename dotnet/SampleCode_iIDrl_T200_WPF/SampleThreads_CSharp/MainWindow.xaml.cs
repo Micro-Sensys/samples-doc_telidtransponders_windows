@@ -25,7 +25,7 @@ namespace SampleThreads_CSharp
             m_Worker.WorkerSupportsCancellation = true;
             m_Worker.DoWork += Worker_DoWork;
 
-            textBlockInitialize_DriverVersion.Text = iIDReaderLibrary.Version.LibraryVersion;
+            textBlockInitialize_DriverVersion.Text = DocInterfaceControl.LibraryVersion;
             textBlock_ReaderInfo.Text = "Library version: " + textBlockInitialize_DriverVersion.Text + "  - Waiting for Initialize";
         }
 

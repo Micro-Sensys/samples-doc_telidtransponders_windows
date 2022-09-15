@@ -15,7 +15,7 @@ Class MainWindow
         m_Worker.WorkerSupportsCancellation = True
         AddHandler m_Worker.DoWork, AddressOf Worker_DoWork
 
-        textBlockInitialize_DriverVersion.Text = iIDReaderLibrary.Version.LibraryVersion
+        textBlockInitialize_DriverVersion.Text = DocInterfaceControl.LibraryVersion
         textBlock_ReaderInfo.Text = "Library version: " + textBlockInitialize_DriverVersion.Text + "  - Waiting for Initialize"
     End Sub
 

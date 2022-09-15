@@ -22,7 +22,7 @@ namespace SampleThreads_CSharp
             Console.WriteLine(".NETCore Console");
             Console.WriteLine("SampleThreads_C#");
             Console.WriteLine("--------------------");
-            Console.WriteLine("Library Version: " + iIDReaderLibrary.Version.LibraryVersion);
+            Console.WriteLine("Library Version: " + DocInterfaceControl.LibraryVersion);
 
             //Get DocInterfaceControl instance
             DocInterfaceControl docIntControl = Console_InitializeDocInterfaceControl();

@@ -51,15 +51,15 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="iIDReaderLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsensys.iIDReaderLibrary.1.0.0\lib\netstandard2.0\iIDReaderLibrary.dll</HintPath>
+    <Reference Include="iIDReaderLibrary, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsensys.iIDReaderLibrary.1.0.3\lib\netstandard2.0\iIDReaderLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="iIDReaderLibrary.DocInterfaceControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsensys.iIDReaderLibrary.DocInterfaceControl.1.0.0\lib\netstandard2.0\iIDReaderLibrary.DocInterfaceControl.dll</HintPath>
+    <Reference Include="iIDReaderLibrary.DocInterfaceControl, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsensys.iIDReaderLibrary.DocInterfaceControl.1.0.2\lib\netstandard2.0\iIDReaderLibrary.DocInterfaceControl.dll</HintPath>
     </Reference>
     <Reference Include="System.Core" />
-    <Reference Include="System.IO.Ports, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Ports.5.0.0\lib\net461\System.IO.Ports.dll</HintPath>
+    <Reference Include="System.IO.Ports, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Ports.6.0.0\lib\net461\System.IO.Ports.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -144,11 +144,4 @@
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
-  <Import Project="..\packages\Microsensys.iIDReaderLibrary.1.0.0\build\Microsensys.iIDReaderLibrary.targets" Condition="Exists('..\packages\Microsensys.iIDReaderLibrary.1.0.0\build\Microsensys.iIDReaderLibrary.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsensys.iIDReaderLibrary.1.0.0\build\Microsensys.iIDReaderLibrary.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsensys.iIDReaderLibrary.1.0.0\build\Microsensys.iIDReaderLibrary.targets'))" />
-  </Target>
 </Project>
