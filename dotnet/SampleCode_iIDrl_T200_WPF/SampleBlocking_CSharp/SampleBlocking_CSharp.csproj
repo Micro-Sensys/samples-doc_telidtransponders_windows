@@ -40,8 +40,8 @@
     <Reference Include="iIDReaderLibrary, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsensys.iIDReaderLibrary.1.0.3\lib\netstandard2.0\iIDReaderLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="iIDReaderLibrary.DocInterfaceControl, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsensys.iIDReaderLibrary.DocInterfaceControl.1.0.2\lib\netstandard2.0\iIDReaderLibrary.DocInterfaceControl.dll</HintPath>
+    <Reference Include="iIDReaderLibrary.DocInterfaceControl, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsensys.iIDReaderLibrary.DocInterfaceControl.1.0.3\lib\netstandard2.0\iIDReaderLibrary.DocInterfaceControl.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
