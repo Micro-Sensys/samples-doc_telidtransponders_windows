@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="SampleAsync_CSharp/SampleAsync_CSharp.csproj" Id="9313e7f9-46c5-448b-a344-f95cc390864f" />
+  <Project Path="SampleAsync_VB/SampleAsync_VB.vbproj" Id="82dab981-5399-4d93-b1f5-c0c87d34477e" />
+  <Project Path="SampleBlocking_CSharp/SampleBlocking_CSharp.csproj" Id="ae6dfc3d-16b4-4cb4-a5bb-ba96753f82de" />
+  <Project Path="SampleBlocking_VB/SampleBlocking_VB.vbproj" Id="874eacd4-84a9-422d-afbe-4965089245df" />
+  <Project Path="SampleThreads_CSharp/SampleThreads_CSharp.csproj" Id="933d939f-b300-44a9-9d30-55408390b4e0" />
+  <Project Path="SampleThreads_VB/SampleThreads_VB.vbproj" Id="384d957e-f9ce-476b-9c7b-34f676977da4" />
+</Solution>

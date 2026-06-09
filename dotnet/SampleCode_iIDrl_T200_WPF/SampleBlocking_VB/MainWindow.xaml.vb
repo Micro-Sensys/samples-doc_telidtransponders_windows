@@ -1,10 +1,10 @@
 ﻿Imports System.ComponentModel
 Imports iIDReaderLibrary
 Imports iIDReaderLibrary.Utils
+Imports iIDReaderLibrary.Utils.Definitions
 
 Class MainWindow
-
-    Private m_Worker As BackgroundWorker = New BackgroundWorker()
+    Private m_Worker As New BackgroundWorker()
     Private m_ReaderFound As Boolean
 
     Private m_DocInterface As DocInterfaceControl = Nothing
@@ -22,9 +22,7 @@ Class MainWindow
     Private Sub Window_Closing(sender As Object, e As ComponentModel.CancelEventArgs)
         'Stop background worker
         m_Worker.CancelAsync()
-        If m_DocInterface IsNot Nothing Then
-            m_DocInterface.Terminate()
-        End If
+        m_DocInterface?.Terminate()
     End Sub
 
     Private Sub SetUiEnabled(_enabled As Boolean, _readerID As Integer)
@@ -56,18 +54,22 @@ Class MainWindow
             '   0 = Serial
             '   2 = Bluetooth
             '   4 = USB
+            '   5 = BluetoothLE
             Dim portType As Byte = 4 'Default USB
             If radioButtonInitialize_PortSerial.IsChecked.Value Then
-                portType = 0
+                portType = PortTypeEnum.PortType_Serial
             End If
             If radioButtonInitialize_PortBt.IsChecked.Value Then
-                portType = 2
+                portType = PortTypeEnum.PortType_Bluetooth
+            End If
+            If radioButtonInitialize_PortBle.IsChecked.Value Then
+                portType = PortTypeEnum.PortType_BluetoothLE
             End If
 
             Dim readerPortSettings = InterfaceCommunicationSettings.GetForSerialDevice(portType, textBoxInitialize_PortName.Text)
 
             'Initialize class. Then call "Initialize"
-            m_DocInterface = New DocInterfaceControl(readerPortSettings, 1356)
+            m_DocInterface = New DocInterfaceControl(readerPortSettings, InterfaceTypeEnum.Interface_HF)
 
             'Initialize
             textBlockInitialize_ParamInterfaceType.Text = "InterfaceType: 1356"
@@ -96,9 +98,7 @@ Class MainWindow
         'Stop background worker
         m_Worker.CancelAsync()
 
-        If m_DocInterface IsNot Nothing Then
-            m_DocInterface.Terminate()
-        End If
+        m_DocInterface?.Terminate()
         m_ReaderFound = False
         SetUiEnabled(False, 0)
     End Sub

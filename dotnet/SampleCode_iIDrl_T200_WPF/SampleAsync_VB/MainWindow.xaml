@@ -34,7 +34,8 @@
                         <TextBlock Grid.Column="0" Text="Port Type: " Margin="5" />
                         <RadioButton Grid.Column="1" Name="radioButtonInitialize_PortSerial" Content="Serial" GroupName="PortType" Margin="5" />
                         <RadioButton Grid.Column="2" Name="radioButtonInitialize_PortBt" Content="Bluetooth" GroupName="PortType" Margin="5" />
-                        <RadioButton Grid.Column="3" Name="radioButtonInitialize_PortUsb" Content="USB" GroupName="PortType" Margin="5" IsChecked="True" />
+                        <RadioButton Grid.Column="3" Name="radioButtonInitialize_PortBle" Content="BluetoothLE" GroupName="PortType" Margin="5" />
+                        <RadioButton Grid.Column="4" Name="radioButtonInitialize_PortUsb" Content="USB" GroupName="PortType" Margin="5" IsChecked="True" />
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>

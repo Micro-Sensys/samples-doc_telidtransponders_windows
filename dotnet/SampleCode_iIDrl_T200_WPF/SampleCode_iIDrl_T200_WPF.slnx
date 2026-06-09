@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="SampleAsync_CSharp/SampleAsync_CSharp.csproj" />
+  <Project Path="SampleAsync_VB/SampleAsync_VB.vbproj" />
+  <Project Path="SampleBlocking_CSharp/SampleBlocking_CSharp.csproj" />
+  <Project Path="SampleBlocking_VB/SampleBlocking_VB.vbproj" />
+  <Project Path="SampleThreads_CSharp/SampleThreads_CSharp.csproj" />
+  <Project Path="SampleThreads_VB/SampleThreads_VB.vbproj" />
+</Solution>
