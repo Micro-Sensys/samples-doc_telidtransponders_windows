@@ -1,6 +1,6 @@
 ﻿using iIDReaderLibrary;
 using iIDReaderLibrary.Utils;
-using System;
+using iIDReaderLibrary.Utils.Definitions;
 using System.ComponentModel;
 using System.Windows;
 
@@ -11,10 +11,10 @@ namespace SampleBlocking_CSharp
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly BackgroundWorker m_Worker = new BackgroundWorker();
+        private readonly BackgroundWorker m_Worker = new();
         private bool m_ReaderFound = false;
 
-        DocInterfaceControl m_DocInterface = null;
+        DocInterfaceControl? m_DocInterface = null;
 
         public MainWindow()
         {
@@ -33,10 +33,7 @@ namespace SampleBlocking_CSharp
         {
             //Stop background worker
             m_Worker.CancelAsync();
-            if (m_DocInterface != null)
-            {
-                m_DocInterface.Terminate();
-            }
+            m_DocInterface?.Terminate();
         }
 
         private void SetUiEnabled(bool _enabled, int _readerID)
@@ -63,12 +60,9 @@ namespace SampleBlocking_CSharp
         #region Initialize
         private void ButtonInitialize_Click(object sender, RoutedEventArgs e)
         {
-            if (m_DocInterface != null)
-            {
-                //First dispose previous instance
-                m_DocInterface.Terminate();
-                m_DocInterface = null;
-            }
+            //First dispose previous instance
+            m_DocInterface?.Terminate();
+            m_DocInterface = null;
             //Get Interface parameters and initialize class
             try
             {
@@ -76,17 +70,20 @@ namespace SampleBlocking_CSharp
                 //  0 = Serial
                 //  2 = Bluetooth
                 //  4 = USB
-                byte portType = 4; //Default USB
-                if (radioButtonInitialize_PortSerial.IsChecked.Value)
-                    portType = 0;
-                if (radioButtonInitialize_PortBt.IsChecked.Value)
-                    portType = 2;
+                //  5 = BluetoothLE
+                byte portType = PortTypeEnum.PortType_USB; //Default USB
+                if (radioButtonInitialize_PortSerial.IsChecked == true)
+                    portType = PortTypeEnum.PortType_Serial;
+                if (radioButtonInitialize_PortBt.IsChecked == true)
+                    portType = PortTypeEnum.PortType_Bluetooth;
+                if (radioButtonInitialize_PortBle.IsChecked == true)
+                    portType = PortTypeEnum.PortType_BluetoothLE;
 
                 var readerPortSettings = InterfaceCommunicationSettings.GetForSerialDevice(portType, textBoxInitialize_PortName.Text);
                 //Interface Type --> 1356 = 13.56MHz (HF)
 
                 //Initialize class. Then call "initialize"
-                m_DocInterface = new DocInterfaceControl(readerPortSettings, 1356);
+                m_DocInterface = new DocInterfaceControl(readerPortSettings, InterfaceTypeEnum.Interface_HF);
 
                 //Initialize
                 textBlockInitialize_ParamInterfaceType.Text = "InterfaceType: 1356";
@@ -122,17 +119,12 @@ namespace SampleBlocking_CSharp
             //Stop background worker
             m_Worker.CancelAsync();
 
-            if (m_DocInterface != null)
-            {
-                m_DocInterface.Terminate();
-                //m_DocInterface = null;
-            }
+            m_DocInterface?.Terminate();
             m_ReaderFound = false;
             SetUiEnabled(false, 0);
         }
-        private void Worker_DoWork(object sender, DoWorkEventArgs e)
+        private void Worker_DoWork(object? sender, DoWorkEventArgs e)
         {
-            BackgroundWorker worker = sender as BackgroundWorker;
             int readerCheckFailCount = 0;
             //Check readerID in 5 seconds interval
             TimeSpan readerCheckSpan = TimeSpan.FromSeconds(5);
@@ -143,9 +135,9 @@ namespace SampleBlocking_CSharp
             //  Check reader communication is still possible in 5 seconds interval
             //      Hint: This interval is not fixed! It is recomended to check the communication with the reader when no other operation is executed.
             //          => Most important for battery powered devices!
-            while (m_DocInterface.IsInitialized)
+            while (m_DocInterface != null && m_DocInterface.IsInitialized)
             {
-                if (worker.CancellationPending == true)
+                if (sender is BackgroundWorker worker && worker.CancellationPending == true)
                 {
                     //Exit loop if Background worker is cancelled
                     e.Cancel = true;
@@ -219,11 +211,11 @@ namespace SampleBlocking_CSharp
                             textBox_Result.Text += string.Format("SerNo: {0}\n", getSensorResult.SerialNumber);
                             textBox_Result.Text += string.Format("Description: {0}\n", getSensorResult.Description);
                             textBox_Result.Text += "Measurements:\n";
-                            foreach(var meas in getSensorResult.Measurements)
+                            foreach (var meas in getSensorResult.Measurements)
                             {
                                 textBox_Result.Text += string.Format("\tTimestamp: {0}\n", meas.Timestamp);
                                 textBox_Result.Text += "\tValues:\n";
-                                foreach(var value in meas.Values)
+                                foreach (var value in meas.Values)
                                 {
                                     textBox_Result.Text += string.Format("\t  {0}{1}{2}\n", value.Symbol, value.Magnitude, value.Unit);
                                 }
